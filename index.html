@@ -3,67 +3,84 @@
 <head>
 </head>
 	<meta charset="utf-8" />
-	<title>Node.js Notificador</title>
+	<title>Nuevo LOLtroen DeLOLrean</title>
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
 	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="estilos.css" />
+
 	<script src="prefixfree.min.js"></script>
 	<script src="jquery.js"></script>
-	<script src="http://192.168.10.37:6969/socket.io/socket.io.js">
-	</script>
-	<style>
-body{
-	background: #333;
-	font-size: 48px;
-	text-align: center;
-
-}
-form{
-	background: #CCC;
-	border-radius: 1em;
-	box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
-	text-shadow: 5px 5px 5px rgba(0,0,0,0.5); 
-	margin: 1em auto;
-	padding: 1em;
-	width:  60%;
-}
-form input{
-	display: block;
-	font-size: 40px;
-	margin: 1em auto;
-	padding: 0.5em;
-	width: 50%;
-}
-	</style>	
-	
-	<script>
-	var websocket = io.connect("http://192.168.10.37:6969");
-	$(document).on("ready", iniciar);
-	function iniciar()
-	{
-		
-		websocket.on("nombreDesdeServidor", recibirMensaje);
-		$("#formulario").on("submit", enviarMensaje);
-
-	}
-	function enviarMensaje(e)
-	{
-		e.preventDefault();
-		websocket.emit("nuevoNombre", $("#nombre").val());
-		//alert("Enviando mensaje "+$("#nombre").val());
-		$("#nombre").fadeOut();
-	}
-	function recibirMensaje(datosServidor)
-	{
-		$("#formulario label").text("Acaba de entrar "+datosServidor);
-	}
-	</script>
+	<script src="codiguito.js"></script>
 </head>
 <body>
-	<form id="formulario">
-		<label>¿Cómo te llamas?</label>
-		<input type="text" id="nombre"
-		 placeholder="Tu nombre completo"
-		 required/>
-	</form>
+	<header>
+	<hgroup>
+		<h1>Nuevo LOLtroen DeLOLrean</h1>
+		<h2>Menos gasolina, más HTLM5</h2>
+	</hgroup>
+	</header>
+	<section>
+		<article id="historia">
+			<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
+
+			<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
+
+			<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? </p>
+
+			<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? </p>
+
+		</article>
+		<figure id="cochecito">
+			<img src="crojo.png" />
+			<figcaption>
+				<h2>LOLtroen DeLOLrean</h2>
+				<ul>
+					<li><strong>Color:</strong> Blanco</li>
+					<li><strong>Techo:</strong> Mate</li>
+					<li><strong>Llantas:</strong> Baratas</li>
+				</ul>
+			</figcaption>
+		</figure>
+		<section id="personalizacion">
+			<article id="color">
+				<h2>Elije un color</h2>
+				<div id="amarillo">&nbsp;</div>
+				<div id="azul">&nbsp;</div>
+				<div id="plateado">&nbsp;</div>
+				<div id="negro">&nbsp;</div>
+				<div id="rojo">&nbsp;</div>
+				<div id="verde">&nbsp;</div>
+			</article>
+			<article id="llantas">
+				<h2>"¿Qué llantas quieres?</h2>
+				<figure id="llanta1">
+					<img src="llanta1.jpg"/>
+					<figcaption>Barratas</figcaption>
+				</figure>
+				<figure id="llanta2">
+					<img src="llanta2.jpg"/>
+					<figcaption>Caras</figcaption>
+				</figure>
+			</article>
+			<article id="techo">
+				<h2>"¿Tipo de techo?</h2>
+				<figure id="techo1">
+					<img src="techo1.jpg"/>
+					<figcaption>Transparente</figcaption>
+				</figure>
+				<figure id="techo2">
+					<img src="techo2.jpg"/>
+					<figcaption>Opaco</figcaption>
+				</figure>
+			</article>
+		</section>
+	</section>
+	<nav>
+		<ul>
+			<li><a href="#" id="personalizar">Personalizar</a></li> 
+			<li><a href="#">Comprar</a></li>
+			<li><a href="#">Contactar</a></li>
+		</ul>
+	</nav>
 </body>
 </html>
