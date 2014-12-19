@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"
+>
+<html>
+<head>
+<title>Imágenes en Canvas</title>
+<link rel="stylesheet" href="estilosimagen.css" />
+<script language="javascript">
+function cargaContextoCanvas(idCanvas){
+   var elemento = document.getElementById(idCanvas);
+   if(elemento && elemento.getContext){
+      var contexto = elemento.getContext('2d');
+      if(contexto){
+         return contexto;
+      }
+   }
+   return false;
+}
+
+
+window.onload = function(){
+   
+   
+   
+   
+   //Recibimos el elemento canvas
+   var ctx = cargaContextoCanvas('micanvas1');
+   if(ctx){
+      //Creo un objeto Image con una imagen de la pagina
+      var img = document.getElementById("im1");
+      ctx.drawImage(img, 10, 10);
+    
+
+     var ctx2 = cargaContextoCanvas('micanvas2');
+   if(ctx2){
+      //Creo un objeto Image con una imagen de la pagina
+      var img2 = document.getElementById("im2");
+      ctx2.drawImage(img2, 10, 10);
+     }
+
+    
+      //consigo una imagen desde un canvas
+      var imgCanvas = document.getElementById("micanvas2");
+      ctx.drawImage(imgCanvas, 100, 120);
+      }
+
+}
+
+</script>
+</head>
+<body>
+<h2>Canvas que estoy creando con una serie de imágenes</h2>
+<canvas id="micanvas1" width="500" height="400">
+Tu navegador no soporta canvas.
+</canvas>
+<p>
+<div style="display: none;">
+<h2>Cosas que pongo aquí para acceder desde Javascript</h2>
+<img src="cazul.png" id="im1">
+<img src="llanta1.jpg" id="im2">
+<p>
+<canvas id="micanvas2" width="350" height="350">
+Recicla tu navegador!!
+</canvas>
+</div>   
+</body>
+</html> 

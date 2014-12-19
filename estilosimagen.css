@@ -1,0 +1,36 @@
+body
+{
+	background: #222;
+	color: #EEE;
+	font-family: "Open Sans", Arial;
+	font-size: 16px;
+	text-align: center;
+}
+header
+{
+	/*border: 10px solid red;*/
+	background: url("logo.png") no-repeat 95% center,
+		    url("fondo.png");
+	background-size: 200px, 100px 100px; /*para la primera url para la segunda url 100px por 100px*/
+	margin: 0 0 1em 0;/*va al giro de las maneillas del reloj*/
+	padding: 0.5em 0; /*superior inferior*/
+	width: 100%;
+}
+header h1
+{
+	font-family: "CFuente";
+	font-size: 3em;
+	margin: 0;
+	text-shadow: rgba(255,255,255,0.5) 5px 5px 10px; /*difunado en x, y, abajo 10px de difuminación*/
+}
+header h2
+{
+	margin: 0;
+	font-weight: normal;
+	text-shadow: rgba(0,0,0,0.7) 2px 2px 5px;
+}
+/*#micanvas { animation: irYvolver 10s infinite linear; }*/
+
+#micanvas2 { animation: irYvolver 10s infinite linear; }
+
+ @keyframes irYvolver { 0% { left: 0%; transform: rotate(0deg); } 50% { left: 50%; transform: rotate(720deg); } 100% { left: 100%; transform: rotate(0deg); } }
